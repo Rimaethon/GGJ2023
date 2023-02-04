@@ -23,7 +23,7 @@ public class CardShuffler : MonoBehaviour
         
         List<int> aPermutation = new List<int>();
 
-        for (int i = 0; i < cardDisturbution.x * cardDisturbution.y; i++)
+        for (int i = 0; i < cards.Length; i++)
             aPermutation.Add(i);
         
         int counter = 0;
@@ -42,7 +42,13 @@ public class CardShuffler : MonoBehaviour
 
                 int anElement = aPermutation [Random.Range(0,aPermutation.Count)];
                 aPermutation.Remove(anElement);
-                //newUnit.GetComponent<Image>().sprite = cards [anElement];
+                newUnit.GetComponent<Image>().sprite = cards [anElement];
+
+                if (aPermutation.Count == 0) 
+                {
+                    for (int k = 0; k < cards.Length; k++)
+                        aPermutation.Add(k);
+                }
             }
         }
     }
