@@ -24,6 +24,7 @@ public class PlaneController : MonoBehaviour
     {
         Vector3 mouseDelta = Input.mousePosition - mouseStart;
         
+        Debug.Log("mouse delta: " + mouseDelta);
         childObject.position = new Vector3(childObject.position.x, childObject.position.y, childObject.position.z - mouseDelta.z * Time.deltaTime);
     }
 }

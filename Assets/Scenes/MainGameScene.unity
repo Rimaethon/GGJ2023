@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571328, b: 0.3069218, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -163,7 +163,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11888655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -306,6 +306,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &255611025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 255611027}
+  - component: {fileID: 255611026}
+  m_Layer: 0
+  m_Name: CardTableMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &255611026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255611025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba1832d8bfcb40e128f69f2ab675a5a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardInspectionPosition: {x: 0, y: 15.13, z: -28.33}
+  cardInspectionRotation: {x: 21.379, y: 0, z: 0}
+--- !u!4 &255611027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255611025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 69.974434, y: 298.82098, z: -0.2551674}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &315861580
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,28 +614,13 @@ GameObject:
   m_Component:
   - component: {fileID: 594024164}
   - component: {fileID: 594024163}
-  - component: {fileID: 594024162}
   m_Layer: 0
   m_Name: Sample Card (2)
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &594024162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594024161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4199260d9d569534b8fe76a70e5bfd4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardBack: {fileID: 0}
-  cardFront: {fileID: 0}
 --- !u!65 &594024163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -892,28 +923,13 @@ GameObject:
   m_Component:
   - component: {fileID: 856933411}
   - component: {fileID: 856933410}
-  - component: {fileID: 856933409}
   m_Layer: 0
   m_Name: Sample Card (4)
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &856933409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856933408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4199260d9d569534b8fe76a70e5bfd4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardBack: {fileID: 0}
-  cardFront: {fileID: 0}
 --- !u!65 &856933410
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1122,28 +1138,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1277090706}
   - component: {fileID: 1277090705}
-  - component: {fileID: 1277090704}
   m_Layer: 0
   m_Name: Sample Card (3)
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1277090704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277090703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4199260d9d569534b8fe76a70e5bfd4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardBack: {fileID: 0}
-  cardFront: {fileID: 0}
 --- !u!65 &1277090705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1184,10 +1185,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1348746655}
   - component: {fileID: 1348746654}
-  - component: {fileID: 1348746656}
   m_Layer: 0
   m_Name: Sample Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1222,20 +1222,6 @@ Transform:
   m_Father: {fileID: 1454378691}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1348746656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348746653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4199260d9d569534b8fe76a70e5bfd4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardBack: {fileID: 0}
-  cardFront: {fileID: 0}
 --- !u!1 &1375360984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,28 +1449,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1811454234}
   - component: {fileID: 1811454233}
-  - component: {fileID: 1811454232}
   m_Layer: 0
   m_Name: Sample Card (1)
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1811454232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1811454231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4199260d9d569534b8fe76a70e5bfd4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardBack: {fileID: 0}
-  cardFront: {fileID: 0}
 --- !u!65 &1811454233
 BoxCollider:
   m_ObjectHideFlags: 0

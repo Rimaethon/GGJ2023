@@ -22,7 +22,7 @@ public class CardFlipper : MonoBehaviour
 
     private float _startTime;
     private bool _isTransforming = false;
-    public bool _isAnyCardFlipped;
+    public static bool _isAnyCardFlipped;
     private float _elapsedTime;
     private float _t;
     
@@ -60,6 +60,7 @@ public class CardFlipper : MonoBehaviour
         //     _cardFrontAnimator.enabled = true;
         // }
 
+        Debug.Log("_isTransforming: " + _isTransforming + "_isAnyCardFlipped: " + _isAnyCardFlipped);
 
         if (_isTransforming && !_isAnyCardFlipped)
         {
@@ -93,7 +94,6 @@ public class CardFlipper : MonoBehaviour
         _elapsedTime = Time.time - _startTime;
         _t = Mathf.Clamp(_elapsedTime / _duration, 0, 1);
         
-        Debug.Log("_t: " + _t);
         if (_t >= 1f)
         {
             _t = 1f;
@@ -101,7 +101,7 @@ public class CardFlipper : MonoBehaviour
         }
 
 
-
+        
         _targetPosition = _camera.transform.position + new Vector3(-9.2f, -5f, 10.5f);
         
         transform.position = Vector3.Lerp(transform.position, _targetPosition, _t);
@@ -120,15 +120,15 @@ public class CardFlipper : MonoBehaviour
     private void PutTheCardBack()
     {
             Debug.Log("putting the card back");
-        _elapsedTime = Time.time - _startTime;
+        /*_elapsedTime = Time.time - _startTime;
         _t = Mathf.Clamp(_elapsedTime / _duration, 0, 1);
 
         if (_t >= 1f)
         {
             _t = 1f;
             _isTransforming = false;
-        }
-        transform.position = Vector3.Lerp(transform.position, _initialPosition, _t);
+        }*/
+        transform.position = _initialPosition; //Vector3.Lerp(transform.position, _initialPosition, _t);
         transform.rotation = Quaternion.Slerp(transform.rotation, _initialRotation, _t);
         transform.localScale = Vector3.Lerp(transform.localScale, _initialScale, _t);
         _isAnyCardFlipped = false;
