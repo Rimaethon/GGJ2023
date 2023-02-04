@@ -66,6 +66,7 @@ public class CardFlipper : MonoBehaviour
             FlipCard();
         }
 
+        //Debug.Log("_isAnyCardFlipped: " + _isAnyCardFlipped + "_isTransforming: " + _isTransforming);
         if (_isAnyCardFlipped && Input.GetMouseButtonDown(0)&& !_isTransforming)
         {
             _startTime = Time.time;
@@ -91,7 +92,8 @@ public class CardFlipper : MonoBehaviour
     {
         _elapsedTime = Time.time - _startTime;
         _t = Mathf.Clamp(_elapsedTime / _duration, 0, 1);
-
+        
+        Debug.Log("_t: " + _t);
         if (_t >= 1f)
         {
             _t = 1f;
@@ -117,6 +119,7 @@ public class CardFlipper : MonoBehaviour
 
     private void PutTheCardBack()
     {
+            Debug.Log("putting the card back");
         _elapsedTime = Time.time - _startTime;
         _t = Mathf.Clamp(_elapsedTime / _duration, 0, 1);
 
