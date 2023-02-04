@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414729, b: 0.121078685, a: 1}
+  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,11 +153,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardUnit: {fileID: 8528448870350646301, guid: cb1ec8925ab091e56a18304ded3c2c50, type: 3}
-  paddingOutside: {x: 1, y: 1.2}
-  paddingBetween: {x: 0.5, y: 0.3}
-  cardDisturbution: {x: 8, y: 2}
+  paddingOutside: {x: 1, y: 1.5}
+  paddingBetween: {x: 0.3, y: 0.3}
+  cardDisturbution: {x: 6, y: 2}
   cardHolder: {fileID: 1463036818}
-  cards: []
+  cards:
+  - {fileID: 21300000, guid: be1f1b811b807e2448e6ca4a946aabe2, type: 3}
+  - {fileID: 21300000, guid: 727eb6ce61be60147b308e82ef147b4e, type: 3}
+  - {fileID: 21300000, guid: 2aa587054a31b9c46b404be1b073a016, type: 3}
+  - {fileID: 21300000, guid: aee0c97bc41d22a4ca69606d4b1c3ce4, type: 3}
+  - {fileID: 21300000, guid: 5d7177415f0a13a40b0bb8678a19eb71, type: 3}
+  - {fileID: 21300000, guid: 5ac5d25b336b5064d93ab1e97ea73eab, type: 3}
 --- !u!4 &87267894
 Transform:
   m_ObjectHideFlags: 0
@@ -276,7 +282,7 @@ Camera:
   m_GameObject: {fileID: 523254957}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -444,7 +450,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1260099238
 RectTransform:
   m_ObjectHideFlags: 0
@@ -485,7 +491,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1df41ca32e00057d9944de98739beb08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 80d50afded91e6b4995dea1f1fb09162, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

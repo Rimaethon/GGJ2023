@@ -10,6 +10,7 @@ public class BlockSlidingGameSystem : MonoBehaviour
     Transform gridHolder;
 
     int columnCount;
+    public Transform _characterTransform;
 
     void Awake() 
     {
@@ -19,11 +20,18 @@ public class BlockSlidingGameSystem : MonoBehaviour
         gridHolder = sbm.GetGridHolder();
 
         columnCount = grids[0].row.Length;
+
+        // _characterTransform.position =
+        //     new Vector2(Vector3.right * .5f * i * gridSize.x, Vector3.down * .5f * j * gridSize.y);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        
         if (GetGridState(currentPosition.x,currentPosition.y) == SlidingBlockMap.GridState.Goal)
             Debug.Log("Reached the goal!");
         

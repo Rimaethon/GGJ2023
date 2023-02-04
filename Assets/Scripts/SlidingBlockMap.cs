@@ -8,7 +8,7 @@ public class SlidingBlockMap : MonoBehaviour
     [SerializeField] Sprite[] gridTypes;
     [SerializeField] Vector2 gridSize;
     [SerializeField] GameObject genericGrid;
-    public enum GridState {Empty, Walkable, Enemy, Block, Start, Goal}
+    public enum GridState {Empty, Walkable, Block, Start, Goal}
 
     [SerializeField] GridStateRow[] grids;
     [SerializeField] Transform gridHolder;
