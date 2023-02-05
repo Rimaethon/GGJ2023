@@ -11,6 +11,34 @@ public class CardActivator : MonoBehaviour
     bool jigsawPuzzle, roadbuildingPuzzle, prisonPuzzle, cardMatchingPuzzle;
     bool isaCalled, fatherAlive;
 
+    public void SetPuzzle(int puzzleCode) 
+    {
+        switch(puzzleCode) 
+        {
+            case 1:
+                jigsawPuzzle = true;
+                break;
+            case 2:
+                roadbuildingPuzzle = true;
+                break;
+            case 3:
+                prisonPuzzle = true;
+                break;
+            case 4:
+                cardMatchingPuzzle = true;
+                break;
+        }
+    }
+
+    public void SetIsaCalled() 
+    {
+        isaCalled = true;
+    }
+
+    public void SetFatherAlive() 
+    {
+        fatherAlive = true;
+    }
 
 
     void Start()
