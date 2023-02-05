@@ -40,6 +40,7 @@ public class CardTableMachine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         Debug.Log("old index is 0: " + (oldStateIndex== 0));
         bool clickPerform = oldStateIndex == 0 ? AnyCardSelected(out inspectedCard) : (oldStateIndex == 2 ? Input.GetMouseButtonDown(0) : false);
         byte currentStateIndex = currentState.Perform(clickPerform, animationState == 2);
@@ -71,7 +72,7 @@ public class CardTableMachine : MonoBehaviour
                 inspectedCard.position = Vector3.Lerp(inspectedCard.position, cardInspectionPosition, 5 * Time.deltaTime);
                 inspectedCard.eulerAngles = Vector3.Lerp(inspectedCard.eulerAngles, cardInspectionRotation, 5 * Time.deltaTime);
 
-                if ((inspectedCard.position-cardInspectionPosition).sqrMagnitude < .1f) 
+                if ((inspectedCard.position-cardInspectionPosition).sqrMagnitude < .001f) 
                 {
                     animationState = 2;
                 }
@@ -82,7 +83,7 @@ public class CardTableMachine : MonoBehaviour
                 inspectedCard.position = Vector3.Lerp(inspectedCard.position,cardPreviousPosition , 5 * Time.deltaTime);
                 inspectedCard.eulerAngles = Vector3.Lerp(inspectedCard.eulerAngles, cardPreviousRotation, 5 * Time.deltaTime);
 
-                if ((inspectedCard.position-cardPreviousPosition).sqrMagnitude < .1f) 
+                if ((inspectedCard.position-cardPreviousPosition).sqrMagnitude < .001f) 
                 {
                     animationState = 2;
                     inspectedCard = null;
