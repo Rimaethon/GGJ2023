@@ -10,6 +10,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CardController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlaneController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@12.1.8/Runtime/UniversalRenderPipelineGlobalSettings.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -84,7 +85,8 @@
       <workItem from="1675508959298" duration="11517000" />
       <workItem from="1675525042109" duration="140000" />
       <workItem from="1675525554241" duration="741000" />
-      <workItem from="1675529812939" duration="8263000" />
+      <workItem from="1675529812939" duration="10258000" />
+      <workItem from="1675561213397" duration="587000" />
     </task>
     <servers />
   </component>
