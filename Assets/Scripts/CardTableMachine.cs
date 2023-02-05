@@ -14,6 +14,10 @@ public class CardTableMachine : MonoBehaviour
     CardTableState[] states;
     CardTableState currentState;
 
+    CardActivator cardActivator;
+    CardScroller cardScroller;
+
+
     byte animationState = 0; //0 none, 1 not completed, 2 completed
     byte oldStateIndex = 0;
 
@@ -35,6 +39,9 @@ public class CardTableMachine : MonoBehaviour
         states[2] = new WaitForRelease();
         states[3] = new AutoScrollCardRelease();
         currentState = states[0];
+
+        cardActivator = FindObjectOfType<CardActivator>();
+        cardScroller = FindObjectOfType<CardScroller>();
     }
 
     // Update is called once per frame
@@ -52,7 +59,8 @@ public class CardTableMachine : MonoBehaviour
             animationState = 1;
             cardPreviousPosition = inspectedCard.position;
             cardPreviousRotation = inspectedCard.eulerAngles;
-            animationPickingDirection = true; 
+            animationPickingDirection = true;
+            cardScroller.enabled = false;
 
         }
 
@@ -80,6 +88,7 @@ public class CardTableMachine : MonoBehaviour
 
             else 
             {
+                cardActivator.ActivateNeighboursOf(int.Parse(inspectedCard.name.Replace("Card ","")));
                 inspectedCard.position = Vector3.Lerp(inspectedCard.position,cardPreviousPosition , 5 * Time.deltaTime);
                 inspectedCard.eulerAngles = Vector3.Lerp(inspectedCard.eulerAngles, cardPreviousRotation, 5 * Time.deltaTime);
 
@@ -87,6 +96,7 @@ public class CardTableMachine : MonoBehaviour
                 {
                     animationState = 2;
                     inspectedCard = null;
+                    cardScroller.enabled = true;
                 }
 
             }
@@ -105,7 +115,8 @@ public class CardTableMachine : MonoBehaviour
         if (hit.transform != null && hit.transform.CompareTag("Card") && Input.GetMouseButtonDown(0))
         {
             hitCard = hit.transform;
-            return true;
+            return cardActivator.isIndexActive(int.Parse(hitCard.transform.name.Replace("Card ","")));
+            
         }
 
         hitCard = null;

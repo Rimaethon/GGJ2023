@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsMenu.unity
     guid: 1877472a5d8cc961f8d258702d2b93e1
+  - enabled: 1
+    path: Assets/Scenes/BlockSliding.unity
+    guid: 9d03a595da41fc2599fd25aeea0c2cba
   m_configObjects: {}
