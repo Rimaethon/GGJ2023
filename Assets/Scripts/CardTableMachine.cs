@@ -52,7 +52,7 @@ public class CardTableMachine : MonoBehaviour
             animationState = 1;
             cardPreviousPosition = inspectedCard.position;
             cardPreviousRotation = inspectedCard.eulerAngles;
-            animationPickingDirection = true;
+            animationPickingDirection = true; 
 
         }
 
